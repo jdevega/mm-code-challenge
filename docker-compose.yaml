@@ -1,0 +1,30 @@
+version: '2'
+
+services:
+  client:
+    build:
+      context: ./
+      dockerfile: ./dockerfiles/node/Dockerfile
+    volumes:
+      - .:/var/app/
+    
+    working_dir: /var/app
+    command: bash -c "yarn && yarn start --host 0.0.0.0"
+    links:
+      - server
+    ports:
+      - "3001:3000"
+      - "4200:4200"
+
+  server:
+    build:
+      context: ./
+      dockerfile: ./dockerfiles/node/Dockerfile
+    environment:
+      - PORT=4000
+    volumes:
+      - .:/var/app/
+    working_dir: /var/app
+    command: bash -c "cd ./server && yarn && yarn start"
+    ports:
+      - "4000:4000"
