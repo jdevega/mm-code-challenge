@@ -1,0 +1,9 @@
+.phone.card .image {
+  max-height: 200px;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.phone.card .image img {
+  padding-top: 10px;
+}

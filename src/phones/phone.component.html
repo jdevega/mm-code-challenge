@@ -1,0 +1,23 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+
+<div *ngIf="phone" class="ui phone card">
+  <div class="image">
+    <img src={{phone.image}}>
+  </div>
+  <div class="content">
+    <a class="header">{{phone.name}}</a>
+    <div class="meta">
+      <span class="date">{{phone.color}}</span>
+    </div>
+    <div class="description">
+      {{phone.description}}
+    </div>
+  </div>
+  <div class="extra content">
+    <a>
+      <i class="euro icon"></i>
+      {{phone.price}}
+    </a>
+  </div>
+</div>
