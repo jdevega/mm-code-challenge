@@ -1,0 +1,8 @@
+
+<h1 class="ui header">Phones</h1>
+{{title}}
+<div class="ui fluid stackable grid">
+  <div class="four wide column" *ngFor="let phone of phones">
+    <card [phone]="phone"></card>
+  </div>
+</div>

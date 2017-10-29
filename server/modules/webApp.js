@@ -8,7 +8,7 @@ const WebAppFactory = () => {
   const apiRouter = express.Router()
 
   app.all('/api/*', bodyParser.json())
-  app.options('*', cors())
+  app.use(cors())
   app.use('/api', apiRouter)
   app.use(express.static('./public'))
   app.get('*', (req, res) => res.status(400).end())

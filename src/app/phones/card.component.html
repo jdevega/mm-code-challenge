@@ -1,14 +1,13 @@
-<!--The content below is only a placeholder and can be replaced.-->
-
-
 <div *ngIf="phone" class="ui phone card">
-  <div class="image">
+  <div class="ui centered image">
     <img src={{phone.image}}>
   </div>
   <div class="content">
-    <a class="header">{{phone.name}}</a>
+    <a  class="header" [routerLink]="['/phones', phone.id]">{{phone.name}}</a>
     <div class="meta">
-      <span class="date">{{phone.color}}</span>
+      <span class="colors" *ngFor="let color of phone.colors">
+          <div class="ui {{color}} circular empty label"></div>
+      </span>
     </div>
     <div class="description">
       {{phone.description}}

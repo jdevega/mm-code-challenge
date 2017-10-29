@@ -1,7 +1,7 @@
 export class Phone {
   id: number
   name: string
-  color: string
+  colors: string[]
   price: number
   description: string
   image: string

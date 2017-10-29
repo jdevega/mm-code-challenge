@@ -1,24 +1,15 @@
-<!--The content below is only a placeholder and can be replaced.-->
-
-<div class="ui fixed  menu">
+<div class="ui fixed menu">
   <div class="ui container">
-    <a href="#" class="header item">
+    <div href="#" class="header item">
       {{title}}
-    </a>
-  </div>
-</div>
-
-<div class="ui main text container">
-  <h1 class="ui header">Phones</h1>
-  {{title}}
-  <div class="ui two column stackable grid container">
-    <div class="column" *ngFor="let phone of phones">
-      <phone [phone]="phone"></phone>
     </div>
   </div>
 </div>
-
-<div class="ui inverted vertical footer segment">
+   
+<div class="ui main container">
+  <content></content>
+  <detail></detail>
+  <div class="ui inverted vertical footer segment">
   <div class="ui center aligned container">
     <h4 class="ui inverted header">Phones</h4>
   </div>

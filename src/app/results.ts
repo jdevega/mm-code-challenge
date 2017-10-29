@@ -1,4 +1,6 @@
-module.exports = [
+import { Phone } from './phones/phone';
+
+export const results: Phone[] = [
   {
     id: 1,
     name: 'iPhone X 64Gb',
