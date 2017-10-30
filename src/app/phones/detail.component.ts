@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core'
-import { Location } from '@angular/common';
-import { ActivatedRoute, ParamMap } from '@angular/router';
-import 'rxjs/add/operator/switchMap';
+import { Location } from '@angular/common'
+import { ActivatedRoute, ParamMap } from '@angular/router'
+import 'rxjs/add/operator/switchMap'
 import { PhoneService } from '../phone.service'
 import { Phone } from './phone'
 
@@ -20,7 +20,10 @@ export class PhoneDetailComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.route.paramMap
-      .switchMap((params: ParamMap) => this.phoneService.getPhone(+params.get('id')))
-      .subscribe(phone => this.phone = phone);
+      .switchMap((params: ParamMap) => {
+        const id = +params.get('id')
+        return console.log(id) || this.phoneService.getPhone(id)
+      })
+      .subscribe(phone => (this.phone = phone))
   }
 }

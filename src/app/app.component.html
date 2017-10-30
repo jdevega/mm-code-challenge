@@ -1,15 +1,16 @@
-<div class="ui fixed menu">
+<div class="ui menu">
   <div class="ui container">
-    <div href="#" class="header item">
-      {{title}}
-    </div>
+    <a routerLink='/phones' class="header item borderless">
+      <i class="ui icon phone"></i> {{title}}
+    </a>
   </div>
 </div>
-   
+
 <div class="ui main container">
-  <content></content>
-  <detail></detail>
-  <div class="ui inverted vertical footer segment">
+  <router-outlet></router-outlet>
+</div>
+
+<div class="ui inverted vertical footer segment">
   <div class="ui center aligned container">
     <h4 class="ui inverted header">Phones</h4>
   </div>

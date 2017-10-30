@@ -3,8 +3,7 @@ import { Phone } from './phone'
 
 @Component({
   selector: 'card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css']
+  templateUrl: './card.component.html'
 })
 export class PhoneCardComponent {
   @Input() phone: Phone

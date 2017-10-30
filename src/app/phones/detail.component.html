@@ -1,22 +1,24 @@
 <div *ngIf="phone" class="ui phone">
-  <div class="ui centered image">
-    <img src={{phone.image}}>
-  </div>
-  <div class="content">
-    <a  class="header">{{phone.name}}</a>
-    <div class="meta">
-      <span class="colors" *ngFor="let color of phone.colors">
-          <div class="ui {{color}} circular empty label"></div>
-      </span>
+  <div class="ui middle aligned stackable grid container">
+    <div class="row">
+      <div class="eight wide column">
+        <h1 class="ui header">{{phone.name}}</h1>
+      </div>
+      <div class="six wide right floated right aligned column">
+        <img src="{{phone.image}}" class="ui right aligned image">
+        <div class="meta">
+          <span class="colors" *ngFor="let color of phone.colors">
+            <div class="ui {{color}} circular empty label"></div>
+          </span>
+          <i class="euro icon"></i>
+          {{phone.price}}
+        </div>
+      </div>
     </div>
-    <div class="description">
-      {{phone.description}}
+    <div class="row">
+      <div class="center aligned column">
+        {{phone.description}}
+      </div>
     </div>
-  </div>
-  <div class="extra content">
-    <a>
-      <i class="euro icon"></i>
-      {{phone.price}}
-    </a>
   </div>
 </div>
